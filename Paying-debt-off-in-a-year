@@ -1,0 +1,22 @@
+balance=42
+
+annualInterestRate=0.2
+
+monthlyPaymentRate=0.04
+
+
+
+for i in range(1,13):
+    
+    minMonthlyPayment=monthlyPaymentRate*balance
+
+    unpaidBalance=balance-minMonthlyPayment
+    unpaidBalance=round(unpaidBalance,2)
+    
+    monthlyInterestRate=annualInterestRate/12.0
+    Interest=unpaidBalance*monthlyInterestRate
+    
+    
+    balance=unpaidBalance+Interest 
+    
+print('Month '+str(i)+' Remaining balance:'+str(round(balance,2)))
