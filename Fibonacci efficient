@@ -1,0 +1,9 @@
+def eff_fib(n,dict):
+    if n in dict:
+        return dict[n]
+    else:
+        ans=eff_fib(n-1,dict)+eff_fib(n-2,dict)
+        d[n]=ans
+        return ans
+d={1:1,2:2}
+print(eff_fib(6,d))
